@@ -1,51 +1,51 @@
 id,question,type,answerable,document,section,page
-Q001,My shop makes about KSh 2.4 million in sales a year. Can I use the simplified turnover tax system?,different_words,yes,kra-turnover-tax-guide-2024.pdf,What is Turnover Tax?;Eligibility for Turnover Tax,2
-Q002,I run a small business and my sales are KSh 6 million. Do I also need to register for VAT if I am under TOT?,different_words,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
-Q003,"Can I subtract rent, salaries and stock purchases before calculating turnover tax?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Can someone claim for expenses under Turnover Tax?,2
-Q004,I am employed and receive a monthly salary. Who is responsible for taking PAYE from it and sending it to KRA?,different_words,yes,kra-paye-guide-2022.pdf,PAYE as You Earn (PAYE);Who is eligible for PAYE registration?,1
-Q005,My employer gives me a company vehicle and pays my housing. Are benefits like these considered when working out PAYE?,different_words,yes,kra-paye-guide-2022.pdf,Non Cash Benefits Chargeable to Tax,2
-Q006,I pay premiums for a life insurance policy. Can that reduce the PAYE I owe?,different_words,yes,kra-paye-guide-2022.pdf,Tax Reliefs – Insurance Relief,4
-Q007,I own residential rental units and receive rent every month. What is the simplified tax regime for this income called?,different_words,yes,kra-rental-income-guide-2024.pdf,Overview of Monthly Rental Income,not_verified
-Q008,"If my business is registered for turnover tax, do I still have to file an annual income tax return for that same turnover-tax income?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Benefits of Turnover Tax,3
-Q009,Under which section of the Income Tax Act is turnover tax charged?,exact_section,yes,kra-turnover-tax-guide-2024.pdf,What is Turnover Tax?,2
-Q010,Which section of the Income Tax Act defines the income that is chargeable to tax?,exact_section,yes,income-tax-act-2026.pdf,Section 3 – Charge of tax,not_verified
-Q011,Which section of the Income Tax Act deals with employment income?,exact_section,yes,income-tax-act-2026.pdf,Section 5 – Income from employment,not_verified
-Q012,Which section of the Income Tax Act provides for residential rental income tax?,exact_section,yes,income-tax-act-2026.pdf,Section 6A – Taxation of rental income,not_verified
-Q013,Which section of the Income Tax Act covers the deduction of tax at source from certain payments?,exact_section,yes,income-tax-act-2026.pdf,Section 35 – Deduction of tax from certain income,not_verified
-Q014,"Which section of the Tax Laws (Amendment) Act, 2024 amends the definition of debenture in the Income Tax Act?",exact_section,yes,tax-laws-amendment-act-2024.pdf,Amendment of section 2 of Cap. 470,not_verified
-Q015,"Which section of the Finance Act, 2025 sets out the short title and commencement dates?",exact_section,yes,finance-act-2025.pdf,Section 1 – Short title and commencement,not_verified
-Q016,Which section of the Income Tax Act is cited by KRA as the legal basis for turnover tax?,exact_section,yes,income-tax-act-2026.pdf,Section 12C – Turnover tax,not_verified
-Q017,What are the three monthly PAYE tax bands and their rates in the 2022 KRA guide?,table,yes,kra-paye-guide-2022.pdf,Income Tax Individual Tax Rates,2
-Q018,What personal relief amount does the 2022 PAYE guide show per month and per year?,table,yes,kra-paye-guide-2022.pdf,Personal Tax Relief,2
-Q019,What is the maximum annual mortgage interest deduction shown in the PAYE guide?,table,yes,kra-paye-guide-2022.pdf,Allowable deductions – Mortgage Interest Deduction,4
-Q020,"What percentage of insurance premiums can qualify for insurance relief, and what is the annual cap?",table,yes,kra-paye-guide-2022.pdf,Tax Reliefs – Insurance Relief,4
-Q021,What annual turnover range does the October 2024 KRA guide give for businesses eligible for turnover tax?,table,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
-Q022,"What turnover tax rate does the October 2024 guide state, and from what date did it apply?",table,yes,kra-turnover-tax-guide-2024.pdf,What is the rate of Turnover Tax?,2
-Q023,"What are the late-filing penalty, late-payment penalty and interest stated in the October 2024 turnover tax guide?",table,yes,kra-turnover-tax-guide-2024.pdf,Penalty and Interest for Turnover Tax,4
-Q024,What annual gross-rent thresholds does the 2024 KRA rental guide give for the monthly residential rental regime?,table,yes,kra-rental-income-guide-2024.pdf,Who is eligible for MRI?,not_verified
-Q025,"A resident business has KSh 8 million in annual turnover and makes VATable supplies. Is it eligible for TOT, and does it cross the VAT registration threshold stated in the guide?",two_sections,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
-Q026,"A business earns rental income as well as ordinary sales. What does the guide say about rental income under TOT, and can expenses be deducted from turnover tax?",two_sections,yes,kra-turnover-tax-guide-2024.pdf,Exemptions under Turnover Tax regime;Can someone claim for expenses under Turnover Tax?,2
-Q027,"If an employer pays an employee KSh 5,000 per month in meals, how does the PAYE guide treat the benefit, and what is the monthly non-taxable meal limit?",two_sections,yes,kra-paye-guide-2022.pdf,Non Cash Benefits Chargeable to Tax;Employment Income not Chargeable to PAYE,2
-Q028,An employee pays into a registered pension scheme and also pays mortgage interest. What deduction limits does the PAYE guide give for each?,two_sections,yes,kra-paye-guide-2022.pdf,Allowable deductions – Mortgage Interest Deduction;Pension contributions,4
-Q029,"An employer has no PAYE to declare for a month. What return must be submitted, and by what date must PAYE normally be remitted?",two_sections,yes,kra-paye-guide-2022.pdf,PAYE Due Date;PAYE Return Filing,3;5
-Q030,"A landlord receives residential rent within the MRI threshold. What rate does the 2024 guide state, and when must the monthly return/payment be made?",two_sections,yes,kra-rental-income-guide-2024.pdf,MRI tax rate;When is MRI Return and Payment Due?,not_verified
-Q031,"What did the Tax Laws (Amendment) Act, 2024 change in the Income Tax Act's definition of debenture, and which principal Act was amended?",two_sections,yes,tax-laws-amendment-act-2024.pdf,Amendment of section 2 of Cap. 470,not_verified
-Q032,"Under the Finance Act 2025, what is the general commencement date and which sections had a separate commencement date?",two_sections,yes,finance-act-2025.pdf,Section 1 – Short title and commencement,not_verified
-Q033,"Did the 2024 KRA turnover tax guide state a 1% or 1.5% rate, and what effective date does it give?",changed_rule,yes,kra-turnover-tax-guide-2024.pdf,What is the rate of Turnover Tax?,2
-Q034,"How did the turnover tax rate change in March 2024, according to the KRA's 2024 guide?",changed_rule,yes,kra-turnover-tax-guide-2024.pdf,What is the rate of Turnover Tax?,2
-Q035,The 2022 PAYE guide lists monthly tax bands and personal relief. What rates and relief amounts did that historical guide publish?,changed_rule,yes,kra-paye-guide-2022.pdf,Income Tax Individual Tax Rates;Personal Tax Relief,2
-Q036,"What did the Tax Laws (Amendment) Act, 2024 amend in the Income Tax Act's definition of debenture?",changed_rule,yes,tax-laws-amendment-act-2024.pdf,Amendment of section 2 of Cap. 470,not_verified
-Q037,"Which commencement dates did the Finance Act, 2025 prescribe, and which sections were deferred to 1 January 2026?",changed_rule,yes,finance-act-2025.pdf,Section 1 – Short title and commencement,not_verified
-Q038,"What did the Finance Act, 2025 change about the time limit for carrying forward trading losses?",changed_rule,yes,finance-act-2025.pdf,Amendment relating to carry-forward of losses,not_verified
-Q039,"What changes did the Finance Act, 2025 make to the tax treatment of gratuity earned from 1 July 2025?",changed_rule,yes,finance-act-2025.pdf,Amendment of section 5 – gratuity,not_verified
-Q040,"How does the 2024 rental-income guide describe the applicable MRI rate, and from what date does it say that rate applies?",changed_rule,yes,kra-rental-income-guide-2024.pdf,What is the MRI tax rate?,not_verified
-Q041,What is the exact process for appealing a traffic speeding ticket issued by the National Police Service?,unanswerable,no,,,
-Q042,What is the current KRA iTax password reset procedure for a taxpayer whose registered phone number has been deactivated?,unanswerable,no,,,
-Q043,Which Kenyan bank currently offers the lowest interest rate on a five-year personal loan?,unanswerable,no,,,
-Q044,"What is the exact amount of county business permit fees payable by a restaurant in Westlands, Nairobi, in 2026?",unanswerable,no,,,
-Q045,How much does the Nairobi County government charge for a single-day outdoor advertising permit in 2026?,unanswerable,no,,,
-Q046,What is the current exchange rate KRA will use to convert a USD invoice issued today into Kenyan shillings?,unanswerable,no,,,
-Q047,What is the step-by-step process for registering a company with the Business Registration Service in 2026?,unanswerable,no,,,
-Q048,What is the current NHIF contribution rate for a salaried employee in October 2026?,unanswerable,no,,,
-Q049,What is the deadline for filing a 2026 Nairobi County single business permit renewal?,unanswerable,no,,,
-Q050,What tax changes were contained in Kenya's Finance Act 2024?,unanswerable,no,,,
+Q001,Nimeanza biashara yangu na natengeneza around 200k per month. Hii turnover tax inaweza kunihusu?,different_words,yes,kra-turnover-tax-guide-2024.pdf,What is Turnover Tax?;Eligibility for Turnover Tax,2
+Q002,"If my business makes 6 million a year, do I qualify for turnover tax?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
+Q003,"Nikilipa rent, salaries na kununua stock, can I remove those expenses before calculating my turnover tax?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Can someone claim for expenses under Turnover Tax?,2
+Q004,Mimi ni employed. KRA inajuaje how much tax to deduct from my salary?,different_words,yes,kra-paye-guide-2022.pdf,PAYE as You Earn (PAYE);Who is eligible for PAYE registration?,1
+Q005,Company imenipatia nyumba na gari. Hizo benefits pia zinatozwa tax?,different_words,yes,kra-paye-guide-2022.pdf,Non Cash Benefits Chargeable to Tax,2
+Q006,I pay for life insurance every month. Does that help me pay less PAYE?,different_words,yes,kra-paye-guide-2022.pdf,Tax Reliefs – Insurance Relief,4
+Q007,Niko na apartments za kupangisha. Kuna tax ingine tofauti na normal income tax ya rent?,different_words,yes,kra-rental-income-guide-2024.pdf,Overview of Monthly Rental Income,not_verified
+Q008,"If I'm already paying turnover tax, do I still have to file an annual return?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Benefits of Turnover Tax,3
+Q009,Which section of the Income Tax Act talks about income that should be taxed?,exact_section,yes,income-tax-act-2026.pdf,Section 3 – Charge of tax,not_verified
+Q010,Where in the law does it explain how employment income is taxed?,exact_section,yes,income-tax-act-2026.pdf,Section 5 – Income from employment,not_verified
+Q011,Which section covers tax on residential rental income?,exact_section,yes,income-tax-act-2026.pdf,Section 6A – Taxation of rental income,not_verified
+Q012,Where does the Income Tax Act talk about withholding tax?,exact_section,yes,income-tax-act-2026.pdf,Section 35 – Deduction of tax from certain income,not_verified
+Q013,Ni section gani ya sheria inasema turnover tax inalipwa?,exact_section,yes,kra-turnover-tax-guide-2024.pdf,What is Turnover Tax?,2
+Q014,Which part of the law changed the meaning of a debenture in 2024?,exact_section,yes,tax-laws-amendment-act-2024.pdf,Amendment of section 2 of Cap. 470,not_verified
+Q015,Where does the Finance Act 2025 explain when the changes start applying?,exact_section,yes,finance-act-2025.pdf,Section 1 – Short title and commencement,not_verified
+Q016,Which section of the Income Tax Act deals specifically with turnover tax?,exact_section,yes,income-tax-act-2026.pdf,Section 12C – Turnover tax,not_verified
+Q017,PAYE rates zilikuwa how much kwa different salary brackets?,table,yes,kra-paye-guide-2022.pdf,Income Tax Individual Tax Rates,2
+Q018,How much personal relief can I get every month?,table,yes,kra-paye-guide-2022.pdf,Personal Tax Relief,2
+Q019,"If I have a mortgage, how much interest can I deduct when calculating my tax?",table,yes,kra-paye-guide-2022.pdf,Allowable deductions – Mortgage Interest Deduction,4
+Q020,I pay life insurance premiums. What's the maximum relief I can claim?,table,yes,kra-paye-guide-2022.pdf,Tax Reliefs – Insurance Relief,4
+Q021,My biashara makes around 3 million annually. Is that within the turnover tax limits?,table,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
+Q022,Turnover tax ni 1% ama 1.5%? Na ilianza lini?,table,yes,kra-turnover-tax-guide-2024.pdf,What is the rate of Turnover Tax?,2
+Q023,"Nikichelewa kulipa turnover tax, how much is the penalty and interest?",table,yes,kra-turnover-tax-guide-2024.pdf,Penalty and Interest for Turnover Tax,4
+Q024,How much rent can I earn before I fall outside the residential rental tax arrangement?,table,yes,kra-rental-income-guide-2024.pdf,Who is eligible for MRI?,not_verified
+Q025,"My business makes 8 million annually and I sell VATable goods. Can I register for turnover tax, and do I also need VAT?",two_sections,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
+Q026,I run a shop and also have rental income. Can I combine both when calculating turnover tax?,two_sections,yes,kra-turnover-tax-guide-2024.pdf,Exemptions under Turnover Tax regime;Can someone claim for expenses under Turnover Tax?,2
+Q027,"Employer wangu ananilipa 5k ya lunch every month. Is that taxable, and is there an amount that is exempt?",two_sections,yes,kra-paye-guide-2022.pdf,Non Cash Benefits Chargeable to Tax;Employment Income not Chargeable to PAYE,2
+Q028,"If I contribute to a pension scheme and I'm also paying a mortgage, can I claim both when calculating PAYE?",two_sections,yes,kra-paye-guide-2022.pdf,Allowable deductions – Mortgage Interest Deduction;Pension contributions,4
+Q029,"This month I had no PAYE to pay. Do I still need to file anything, and when is the deadline?",two_sections,yes,kra-paye-guide-2022.pdf,PAYE Due Date;PAYE Return Filing,3;5
+Q030,"I collect rent from residential houses every month. How much tax do I pay, and when should I submit it?",two_sections,yes,kra-rental-income-guide-2024.pdf,MRI tax rate;When is MRI Return and Payment Due?,not_verified
+Q031,What exactly changed about debentures in the 2024 tax amendments?,two_sections,yes,tax-laws-amendment-act-2024.pdf,Amendment of section 2 of Cap. 470,not_verified
+Q032,"Finance Act 2025 ilianza kutumika lini, and were there any changes that only started in January 2026?",two_sections,yes,finance-act-2025.pdf,Section 1 – Short title and commencement,not_verified
+Q033,"I remember turnover tax being 1%. Is it still 1%, or did KRA change it?",changed_rule,yes,kra-turnover-tax-guide-2024.pdf,What is the rate of Turnover Tax?,2
+Q034,"Before March 2024, how much was turnover tax, and what did it become afterwards?",changed_rule,yes,kra-turnover-tax-guide-2024.pdf,What is the rate of Turnover Tax?,2
+Q035,I'm checking an old PAYE calculation. What were the salary tax bands and personal relief amounts in the 2022 rates?,changed_rule,yes,kra-paye-guide-2022.pdf,Income Tax Individual Tax Rates;Personal Tax Relief,2
+Q036,Did the 2024 amendments change what counts as a debenture for tax purposes?,changed_rule,yes,tax-laws-amendment-act-2024.pdf,Amendment of section 2 of Cap. 470,not_verified
+Q037,"Did all the Finance Act 2025 changes start immediately, or were some postponed?",changed_rule,yes,finance-act-2025.pdf,Section 1 – Short title and commencement,not_verified
+Q038,I heard the rules around carrying forward business losses changed in 2025. What changed?,changed_rule,yes,finance-act-2025.pdf,Amendment relating to carry-forward of losses,not_verified
+Q039,"If someone earns gratuity after July 2025, how is it treated for tax?",changed_rule,yes,finance-act-2025.pdf,Amendment of section 5 – gratuity,not_verified
+Q040,Has the tax rate on residential rental income changed? What rate does the 2024 guidance give?,changed_rule,yes,kra-rental-income-guide-2024.pdf,What is the MRI tax rate?,not_verified
+Q041,Nimefika KRA iTax and forgotten my password. How do I reset it if my old phone number is no longer active?,unanswerable,no,,,
+Q042,Which bank in Kenya has the cheapest personal loan interest rate right now?,unanswerable,no,,,
+Q043,How much should I pay for a business permit for a small restaurant in Westlands?,unanswerable,no,,,
+Q044,I want to put up an advertising billboard in Nairobi. How much does the county charge?,unanswerable,no,,,
+Q045,"If I receive money in dollars today, which exchange rate does KRA use when calculating tax?",unanswerable,no,,,
+Q046,How do I register a limited company in Kenya step by step?,unanswerable,no,,,
+Q047,How much does an employee currently contribute under the new SHA health insurance system?,unanswerable,no,,,
+Q048,When is the deadline for renewing a Nairobi County business permit this year?,unanswerable,no,,,
+Q049,Nimepewa speeding ticket na traffic police. How do I challenge it?,unanswerable,no,,,
+Q050,What changes were introduced by Kenya's Finance Act 2024?,unanswerable,no,,,
