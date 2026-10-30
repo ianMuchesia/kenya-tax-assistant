@@ -27,7 +27,9 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
 | `income-tax-act-2026.pdf` | KRA copy of Cap. 470 | the law itself: sections and schedules (tables) |
 | `tax-laws-amendment-act-2024.pdf` | Kenya Law, Act No. 12 of 2024 | the 2024 changes (**there was no Finance Act 2024**: the bill was withdrawn) |
 | `finance-act-2025.pdf` | Kenya Law, Act No. 9 of 2025 | rule changes, year 1 |
-| `finance-act-2026.pdf` | Kenya Law (to download) | rule changes, year 2 |
+
+- **No Finance Act 2026:** it was not on Kenya Law yet (2026-10-30). The two years of changes are 2024 (Tax Laws
+  Amendment Act) and 2025 (Finance Act); the Income Tax Act PDF is the 2026 revision, i.e. the current law.
 
 - File names carry the year, so the Milestone 3 year filter can read it.
 - Kenya Law blocks scripted downloads (bot protection), so its Acts were downloaded by hand in a browser.
