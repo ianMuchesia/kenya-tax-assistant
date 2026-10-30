@@ -12,6 +12,10 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
   so tokens are counted per answer from the start; (3) an API key is needed, kept out of git.
 - **Embeddings: `nomic-embed-text` in Ollama (local).** Embedding all chunks is many calls; local is free and private.
 - **Small jobs (e.g. query rewriting): qwen2.5:3b (local)**, unless measurements say Gemini is needed.
+- **Who does what:** M1–M3 retrieval uses no paid model (code, local embeddings, Qwen for rewriting, a local
+  reranker). Qwen also extracts memory facts and writes session summaries (M5). **Gemini only writes the final
+  answer** (M4/M6): reading the chunks, citing, refusing. Because of Gemini's rate limits: the answer model is
+  swappable (develop with Qwen, measure with Gemini), retry with a wait on HTTP 429, cache answers, count calls.
 - **PDF extraction: PyMuPDF first**, Docling only if tables come out garbled.
 - **PDFs are committed to git** (public documents, small): both machines measure against the exact same files.
   The database is not in git: it is rebuilt from `docs/` on each machine.
