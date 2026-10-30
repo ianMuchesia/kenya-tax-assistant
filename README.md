@@ -57,7 +57,7 @@ system already handles). Mix on purpose:
 ## Progress
 
 - [x] Day 1: decisions made (`decisions.md`), `CLAUDE.md` rules
-- [ ] Documents chosen and downloaded into `docs/`
+- [ ] Documents chosen and downloaded into `docs/` (6 of 7 done; `finance-act-2026.pdf` still to download by hand)
 - [ ] Milestone 0: 50 questions written, categories checked by the adviser
 - [ ] Milestone 1: loading and chunking
 - [ ] Milestone 2: embeddings and hybrid search
@@ -68,4 +68,6 @@ system already handles). Mix on purpose:
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** choose the 5–10 documents and download them into `docs/`.
+**Next step:** download the Finance Act 2026 from new.kenyalaw.org (browser) as `docs/finance-act-2026.pdf`,
+then Milestone 0: read the documents and write the 50 questions in `questions.csv`
+(`id,question,type,answerable,document,section,page`).

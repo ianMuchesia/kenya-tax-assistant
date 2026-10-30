@@ -16,3 +16,20 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
 - **PDFs are committed to git** (public documents, small): both machines measure against the exact same files.
   The database is not in git: it is rebuilt from `docs/` on each machine.
 - **Plain Python, no RAG framework**, so every step is visible.
+
+## 2026-10-30: the documents (`docs/`)
+
+| File | Source | Why |
+|---|---|---|
+| `kra-paye-guide-2022.pdf` | KRA | salary questions; **older than the Acts**, so it may state rules that later changed |
+| `kra-turnover-tax-guide-2024.pdf` | KRA "Everything About Turnover Tax" | small-business questions |
+| `kra-rental-income-guide-2024.pdf` | KRA "Overview of Monthly Rental Income Tax" | landlord questions |
+| `income-tax-act-2026.pdf` | KRA copy of Cap. 470 | the law itself: sections and schedules (tables) |
+| `tax-laws-amendment-act-2024.pdf` | Kenya Law, Act No. 12 of 2024 | the 2024 changes (**there was no Finance Act 2024**: the bill was withdrawn) |
+| `finance-act-2025.pdf` | Kenya Law, Act No. 9 of 2025 | rule changes, year 1 |
+| `finance-act-2026.pdf` | Kenya Law (to download) | rule changes, year 2 |
+
+- File names carry the year, so the Milestone 3 year filter can read it.
+- Kenya Law blocks scripted downloads (bot protection), so its Acts were downloaded by hand in a browser.
+- Known traps worth questions: "What did the Finance Act 2024 change?" (there wasn't one); the rental income rate
+  differs between older and newer sources; the 2022 PAYE guide vs the newer Acts (two of our own sources disagree).
