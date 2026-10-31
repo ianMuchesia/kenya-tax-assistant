@@ -68,4 +68,6 @@ system already handles). Mix on purpose:
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** Milestone 1, step 1: type `extract.py` (PDF -> `pages.jsonl`, one record per page, NFKC cleaning).
+**Next step:** Milestone 1, step 3: keyword search over each chunk set + score the 50 questions (top-5 hit rate
+per method, contents pages kept, then again without them). Done so far: `extract.py` (221 pages), `chunk.py`
+(fixed 303 / heading 562 / overlap 761 chunks).
