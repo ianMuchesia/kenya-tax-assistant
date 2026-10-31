@@ -58,7 +58,7 @@ system already handles). Mix on purpose:
 
 - [x] Day 1: decisions made (`decisions.md`), `CLAUDE.md` rules
 - [x] Documents chosen and downloaded into `docs/` (6 PDFs; see `decisions.md`)
-- [ ] Milestone 0: 50 questions written, categories checked by the adviser
+- [x] Milestone 0: 50 questions written (`questions.csv`); adviser check of the categories still to do
 - [ ] Milestone 1: loading and chunking
 - [ ] Milestone 2: embeddings and hybrid search
 - [ ] Milestone 3: reranking and query rewriting
@@ -68,5 +68,4 @@ system already handles). Mix on purpose:
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** Milestone 0: read the documents and write the 50 questions in `questions.csv`
-(`id,question,type,answerable,document,section,page`).
+**Next step:** Milestone 1, step 1: type `extract.py` (PDF -> `pages.jsonl`, one record per page, NFKC cleaning).

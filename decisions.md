@@ -37,5 +37,9 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
 
 - File names carry the year, so the Milestone 3 year filter can read it.
 - Kenya Law blocks scripted downloads (bot protection), so its Acts were downloaded by hand in a browser.
+- **2026-10-31, answer keys checked against the extracted text:** the first draft said the debenture definition
+  was changed by the Tax Laws (Amendment) Act 2024; the word "debenture" is not in that Act at all; it was the
+  Finance Act 2025, s.2 (p3). An answer key written from memory was wrong. Q036 now tests exactly that trap.
+  Score by **section number + document**, not by section title (titles get paraphrased).
 - Known traps worth questions: "What did the Finance Act 2024 change?" (there wasn't one); the rental income rate
   differs between older and newer sources; the 2022 PAYE guide vs the newer Acts (two of our own sources disagree).
