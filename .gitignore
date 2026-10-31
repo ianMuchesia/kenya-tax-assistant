@@ -5,3 +5,4 @@ __pycache__/
 *.db
 wheels-*/
 pages.jsonl
+chunks_*.jsonl
