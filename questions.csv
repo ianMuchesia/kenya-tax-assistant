@@ -1,7 +1,7 @@
 id,question,type,answerable,document,section,page
 Q001,Nimeanza biashara yangu na natengeneza around 200k per month. Hii turnover tax inaweza kunihusu?,different_words,yes,kra-turnover-tax-guide-2024.pdf,What is Turnover Tax?;Eligibility for Turnover Tax,2
 Q002,"If my business makes 6 million a year, do I qualify for turnover tax?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
-Q003,"Nikilipa rent, salaries na kununua stock, can I remove those expenses before calculating my turnover tax?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Can someone claim for expenses under Turnover Tax?,2
+Q003,"Nikilipa rent, salaries na kununua stock, can I remove those expenses before calculating my turnover tax?",different_words,yes,kra-turnover-tax-guide-2024.pdf,Can someone claim for expenses under Turnover Tax?,3
 Q004,Mimi ni employed. KRA inajuaje how much tax to deduct from my salary?,different_words,yes,kra-paye-guide-2022.pdf,PAYE as You Earn (PAYE);Who is eligible for PAYE registration?,1
 Q005,Company imenipatia nyumba na gari. Hizo benefits pia zinatozwa tax?,different_words,yes,kra-paye-guide-2022.pdf,Non Cash Benefits Chargeable to Tax,2
 Q006,I pay for life insurance every month. Does that help me pay less PAYE?,different_words,yes,kra-paye-guide-2022.pdf,Tax Reliefs – Insurance Relief,4
@@ -16,12 +16,12 @@ Q014,What does section 12E of the Income Tax Act cover?,exact_section,yes,income
 Q015,Section 30 inaongelea nini?,exact_section,yes,income-tax-act-2026.pdf,Section 30 – Personal relief,70
 Q016,Go through section 12c what does it talk about?,exact_section,yes,income-tax-act-2026.pdf,Section 12C – Turnover and presumptive tax,39
 Q017,PAYE rates zilikuwa how much kwa different salary brackets?,table,yes,kra-paye-guide-2022.pdf,Income Tax Individual Tax Rates,2
-Q018,How much personal relief can I get every month?,table,yes,kra-paye-guide-2022.pdf,Personal Tax Relief,2
+Q018,How much personal relief can I get every month?,table,yes,kra-paye-guide-2022.pdf,Personal Tax Relief,2;4
 Q019,"If I have a mortgage, how much interest can I deduct when calculating my tax?",table,yes,kra-paye-guide-2022.pdf,Allowable deductions – Mortgage Interest Deduction,4
 Q020,I pay life insurance premiums. What's the maximum relief I can claim?,table,yes,kra-paye-guide-2022.pdf,Tax Reliefs – Insurance Relief,4
 Q021,My biashara makes around 3 million annually. Is that within the turnover tax limits?,table,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
 Q022,PAYE band ni nini na zote ziko wapi?,table,yes,income-tax-act-2026.pdf,Third Schedule – Individual income tax rates,109
-Q023,"Nikichelewa kulipa turnover tax, how much is the penalty and interest?",table,yes,kra-turnover-tax-guide-2024.pdf,Penalty and Interest for Turnover Tax,4
+Q023,"Nikichelewa kulipa turnover tax, how much is the penalty and interest?",table,yes,kra-turnover-tax-guide-2024.pdf,Penalty and Interest for Turnover Tax,3
 Q024,How much rent can I earn before I fall outside the residential rental tax arrangement?,table,yes,kra-rental-income-guide-2024.pdf,Who is eligible for MRI? (above KSh 15 million per year: not MRI),2
 Q025,"My business makes 8 million annually and I sell VATable goods. Can I register for turnover tax, and do I also need VAT?",two_sections,yes,kra-turnover-tax-guide-2024.pdf,Eligibility for Turnover Tax,2
 Q026,I run a shop and also have rental income. Can I combine both when calculating turnover tax?,two_sections,yes,kra-turnover-tax-guide-2024.pdf,Exemptions under Turnover Tax regime;Can someone claim for expenses under Turnover Tax?,2

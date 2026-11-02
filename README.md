@@ -44,7 +44,8 @@ system already handles). Mix on purpose:
 
 | Milestone | Result |
 |---|---|
-| 1 | Keyword search (BM25), top 5, strict scoring: overlap chunks **26/40 = 65%** (~1,050 words sent); fixed 20/40, heading 20/40. Contents pages: no effect. Weakest: exact_section 4/8, table 4/8. 11 questions missed by every method. |
+| 1 | Keyword search (BM25), top 5, strict scoring: overlap chunks **28/40 = 70%** (~1,050 words sent; 26/40 before fixing 2 wrong answer keys); fixed 20/40, heading 20/40. Contents pages: no effect. Weakest: exact_section 4/8, table 4/8. 11 questions missed by every method. |
+| 2 | Overlap chunks, top 5: keyword 28/40 = 70%; embeddings (nomic-embed-text) 27/40 = 68%; **hybrid (RRF) 31/40 = 78%**, ~930 words sent. Keyword and embeddings miss different questions, so merging them helps. |
 
 ## Setup
 
@@ -60,7 +61,7 @@ system already handles). Mix on purpose:
 - [x] Documents chosen and downloaded into `docs/` (6 PDFs; see `decisions.md`)
 - [x] Milestone 0: 50 questions written (`questions.csv`); adviser check of the categories still to do
 - [x] Milestone 1: loading, chunking, keyword search, baseline (65%)
-- [ ] Milestone 2: embeddings and hybrid search
+- [x] Milestone 2: embeddings and hybrid search (78%)
 - [ ] Milestone 3: reranking and query rewriting
 - [ ] Milestone 4: answers with citations and refusals
 - [ ] Milestone 5: memory
@@ -68,6 +69,6 @@ system already handles). Mix on purpose:
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** Milestone 2: embeddings (`ollama pull nomic-embed-text` first, at work) + hybrid search (keyword +
-embeddings, reciprocal rank fusion). Same `evaluate.py`, beat 65%. Before that: look at 2-3 of the 11 questions every
-method misses (search problem or wrong answer key?).
+**Next step:** Milestone 3: reranker (sentence-transformers, download at work) on the hybrid top 20, then query
+rewriting ("section 3" -> look up the chunk labelled section 3). Still missed by hybrid: Q004 Q006 Q009 Q012 Q022
+Q030 Q036 Q038 Q039. Run `python embed.py overlap` once on each machine first (~9 min; vectors are not in git).

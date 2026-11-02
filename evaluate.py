@@ -13,6 +13,9 @@ from pathlib import Path
 
 
 from bm25 import BM25, load_chunks
+from vector_search import VectorSearch, load_vectors
+from hybrid import HybridSearch 
+
 
 
 HERE = Path(__file__).resolve().parent
@@ -67,8 +70,8 @@ def is_hit(chunk: dict, locations: list[tuple[str, int]]) -> bool:
 
 
 
-def evaluate(chunks: list[dict], questions: list[dict]) -> dict:
-    search_engine = BM25(chunks)
+def evaluate(search_engine, questions: list[dict]) -> dict:
+  
 
     hits = 0
     total_words = 0
@@ -130,16 +133,24 @@ def print_result(method: str, label: str, result: dict, number_of_questions: int
     
 if __name__ == "__main__":
     questions = load_questions()
-    print(f"{len(questions)} answerable questions, top {TOP_K}, keyword search (BM25)\n")
+    print(f"{len(questions)} answerable questions, top {TOP_K}, overlap chunks\n")
+    
+    
+    
+    chunks = load_chunks("overlap")
+    vectors = load_vectors("overlap")
 
-    for method in ["fixed", "heading", "overlap"]:
-        all_chunks = load_chunks(method)
+    engines = {
+        "keyword": BM25(chunks),
+        "vector": VectorSearch(chunks, vectors),
+    }
+    
+    engines["hybrid"] = HybridSearch(engines["keyword"], engines["vector"])  
 
-        result = evaluate(all_chunks, questions)
-        print_result(method, "with contents", result, len(questions))
 
-        result = evaluate(without_contents(all_chunks), questions)
-        print_result(method, "no contents", result, len(questions))
+
+    for name in engines:
+        result = evaluate(engines[name], questions)
+        print_result(name, "", result, len(questions))
         print(f"{'':24}missed: {' '.join(result['missed'])}")
-
 

@@ -54,3 +54,16 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
 - **Contents pages kept:** removing them changed nothing.
 - Weak spots for Milestone 2: exact_section 4/8, table 4/8; Swahili/Sheng words score 0 (they are in no document);
   no stemming ("tax" is not "taxes"). 11 questions are missed by every chunking method, so chunking is not their problem.
+- **Two answer keys fixed after looking at the misses:** Q023 pointed at turnover guide page 4, which is blank (the
+  penalty text is on page 3); Q018 now accepts PAYE guide page 2 (table row) or 4 (the explanation). Baseline 26 -> 28/40.
+
+## 2026-11-02: Milestone 2, embeddings and hybrid search
+
+- **Vectors in a plain file** (`vectors_overlap.jsonl`, 761 x 768 numbers, 7.8 MB, not in git), not Postgres yet:
+  761 chunks are small and the file shows exactly what a vector is. Building it takes ~9 minutes on the work laptop CPU.
+- nomic-embed-text needs the labels `search_document: ` (chunks) and `search_query: ` (questions).
+- **Embeddings alone did not beat keywords** (27 vs 28/40), but they miss different questions. Hybrid with reciprocal
+  rank fusion (top 20 from each, RRF_K = 60) gives **31/40 = 78%**. RRF uses ranks, not scores, because BM25 and
+  cosine scores are on different scales.
+- Section-number questions (Q009, Q012) fail with both engines: a number has no "meaning". Fix planned in Milestone 3
+  (look up the chunk's section label), not with a better embedding model.
