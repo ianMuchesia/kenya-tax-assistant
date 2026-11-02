@@ -44,7 +44,7 @@ system already handles). Mix on purpose:
 
 | Milestone | Result |
 |---|---|
-| 1 | |
+| 1 | Keyword search (BM25), top 5, strict scoring: overlap chunks **26/40 = 65%** (~1,050 words sent); fixed 20/40, heading 20/40. Contents pages: no effect. Weakest: exact_section 4/8, table 4/8. 11 questions missed by every method. |
 
 ## Setup
 
@@ -59,7 +59,7 @@ system already handles). Mix on purpose:
 - [x] Day 1: decisions made (`decisions.md`), `CLAUDE.md` rules
 - [x] Documents chosen and downloaded into `docs/` (6 PDFs; see `decisions.md`)
 - [x] Milestone 0: 50 questions written (`questions.csv`); adviser check of the categories still to do
-- [ ] Milestone 1: loading and chunking
+- [x] Milestone 1: loading, chunking, keyword search, baseline (65%)
 - [ ] Milestone 2: embeddings and hybrid search
 - [ ] Milestone 3: reranking and query rewriting
 - [ ] Milestone 4: answers with citations and refusals
@@ -68,6 +68,6 @@ system already handles). Mix on purpose:
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** Milestone 1, step 3: keyword search over each chunk set + score the 50 questions (top-5 hit rate
-per method, contents pages kept, then again without them). Done so far: `extract.py` (221 pages), `chunk.py`
-(fixed 303 / heading 562 / overlap 761 chunks).
+**Next step:** Milestone 2: embeddings (`ollama pull nomic-embed-text` first, at work) + hybrid search (keyword +
+embeddings, reciprocal rank fusion). Same `evaluate.py`, beat 65%. Before that: look at 2-3 of the 11 questions every
+method misses (search problem or wrong answer key?).

@@ -43,3 +43,14 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
   Score by **section number + document**, not by section title (titles get paraphrased).
 - Known traps worth questions: "What did the Finance Act 2024 change?" (there wasn't one); the rental income rate
   differs between older and newer sources; the 2022 PAYE guide vs the newer Acts (two of our own sources disagree).
+
+## 2026-11-02: Milestone 1 baseline
+
+- **Strict scoring:** a chunk counts as a hit only if it is from the right document, covers a right page, and covers
+  **at most 2 pages**. The first version had no size rule and the PAYE guide's one giant chunk (pages 2-8) "hit"
+  every PAYE question: heading chunking looked best (30/40) only because of that. Measure the measurement.
+- **Overlap chunking chosen** (heading sections, long ones cut into 300 words sharing 50): 26/40 = 65%, vs 20/40 for
+  fixed and heading, and it sends the fewest words (~1,050 per question).
+- **Contents pages kept:** removing them changed nothing.
+- Weak spots for Milestone 2: exact_section 4/8, table 4/8; Swahili/Sheng words score 0 (they are in no document);
+  no stemming ("tax" is not "taxes"). 11 questions are missed by every chunking method, so chunking is not their problem.
