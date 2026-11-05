@@ -15,6 +15,10 @@ from pathlib import Path
 from bm25 import BM25, load_chunks
 from vector_search import VectorSearch, load_vectors
 from hybrid import HybridSearch 
+from section_lookup import SectionSearch
+from rerank import RerankSearch
+
+
 
 
 
@@ -146,6 +150,12 @@ if __name__ == "__main__":
     }
     
     engines["hybrid"] = HybridSearch(engines["keyword"], engines["vector"])  
+    
+    engines["section"] = SectionSearch(engines["hybrid"], chunks)
+    
+    engines["rerank"] = SectionSearch(RerankSearch(engines["hybrid"]), chunks)
+
+
 
 
 

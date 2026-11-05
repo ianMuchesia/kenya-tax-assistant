@@ -67,3 +67,17 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
   cosine scores are on different scales.
 - Section-number questions (Q009, Q012) fail with both engines: a number has no "meaning". Fix planned in Milestone 3
   (look up the chunk's section label), not with a better embedding model.
+
+## 2026-11-05: Milestone 3, section lookup and reranking
+
+- **Reranker alone gave no gain:** `mmarco-mMiniLMv2-L12-H384-v1` on the hybrid top 20 scored 31/40 (same as hybrid), and
+  the English `ms-marco-MiniLM-L-6-v2` 30/40. Both pushed exact-section answers down (6/8 -> 4/8).
+- **Section lookup** (question names a section -> its first 2 pieces in the Income Tax Act go first): 33/40, top-1 hits
+  19 -> 24, no model needed. Beat the reranker, so the order of work changed.
+- **Together:** 35/40 = 88%, but top-1 falls from 24 to 21, and each question costs about 7 seconds on CPU plus a 470 MB
+  model. **Keep or drop the reranker in Milestone 4,** by answer quality. 35 vs 33 is only 2 questions of 40.
+- **Be careful with these numbers:** the lookup was written after seeing Q009, Q012 and Q014 fail, so exact_section 8/8
+  is flattering. There is no separate test set. It misses "kifungu cha 3", and always assumes the Income Tax Act.
+- 16 Act chunks carry the label "3" because schedule paragraphs are numbered too. The lookup works only because real
+  sections come first in the file.
+- Models were checked by running them on our questions; nothing proved the multilingual model was trained on Swahili.

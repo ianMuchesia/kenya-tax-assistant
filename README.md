@@ -46,6 +46,7 @@ system already handles). Mix on purpose:
 |---|---|
 | 1 | Keyword search (BM25), top 5, strict scoring: overlap chunks **28/40 = 70%** (~1,050 words sent; 26/40 before fixing 2 wrong answer keys); fixed 20/40, heading 20/40. Contents pages: no effect. Weakest: exact_section 4/8, table 4/8. 11 questions missed by every method. |
 | 2 | Overlap chunks, top 5: keyword 28/40 = 70%; embeddings (nomic-embed-text) 27/40 = 68%; **hybrid (RRF) 31/40 = 78%**, ~930 words sent. Keyword and embeddings miss different questions, so merging them helps. |
+| 3 | Overlap chunks, top 5: section lookup + hybrid 33/40 = 82%; **section lookup + hybrid + multilingual reranker 35/40 = 88%**, ~1,070 words sent, about 7 seconds per question on CPU. Reranker alone: 31/40, no gain. Top-1 hits: hybrid 19, section 24, both 21. |
 
 ## Setup
 
@@ -62,13 +63,14 @@ system already handles). Mix on purpose:
 - [x] Milestone 0: 50 questions written (`questions.csv`); adviser check of the categories still to do
 - [x] Milestone 1: loading, chunking, keyword search, baseline (65%)
 - [x] Milestone 2: embeddings and hybrid search (78%)
-- [ ] Milestone 3: reranking and query rewriting
+- [x] Milestone 3: section lookup and reranking (88%); year filter not built
 - [ ] Milestone 4: answers with citations and refusals
 - [ ] Milestone 5: memory
 - [ ] Milestone 6: memory + search together
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** Milestone 3: reranker (sentence-transformers, download at work) on the hybrid top 20, then query
-rewriting ("section 3" -> look up the chunk labelled section 3). Still missed by hybrid: Q004 Q006 Q009 Q012 Q022
-Q030 Q036 Q038 Q039. Run `python embed.py overlap` once on each machine first (~9 min; vectors are not in git).
+**Next step:** Milestone 4: Gemini writes answers with citations and refuses when the documents don't answer (the 10
+unanswerable questions). Needs a Gemini API key in `.env`. Does the reranker stay? Decide here, by answer quality. Still
+missed: Q004 Q007 Q022 Q038 Q039. Each machine needs `python embed.py overlap` (~9 min, not in git), and the reranker
+needs torch, sentence-transformers and a 470 MB model, so run that at work, not at home.
