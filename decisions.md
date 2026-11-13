@@ -81,3 +81,19 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
 - 16 Act chunks carry the label "3" because schedule paragraphs are numbered too. The lookup works only because real
   sections come first in the file.
 - Models were checked by running them on our questions; nothing proved the multilingual model was trained on Swahili.
+
+## 2026-11-13: Milestone 4 so far, Gemini answers
+
+- **Model `gemini-3.1-flash-lite`**, written out exactly: on the free tier the Flash models allow only 20 requests a day
+  (one eval run needs 50); Flash-Lite allows 15 a minute and 500 a day. `gemini.py` waits 4.5 s between calls,
+  retries 429/500/503, and caches every answer by a hash of model + prompt, so reruns spend nothing.
+- **Free tier: Google may use the content to improve its products.** Fine for public laws and test questions, not for
+  real users' questions: a launch needs the paid tier.
+- **`mask.py`** hides KRA PINs, phone numbers, emails and 7-8 digit ID numbers before anything leaves the laptop. It keeps
+  amounts with commas or a money word ("KSh 1500000"); a bare "1500000" is masked (privacy wins). It changes 0 of the 50.
+- **Citations by number:** sources are numbered [1]-[5] and our code maps the number to document and page, so Gemini
+  can't invent a page. Result: 0 made-up citations. Bug found by reading answers: Gemini writes "[1, 3, 4]"; fixed.
+- **Results:** right citation 27/40 and right refusal 9/10, both with and without the reranker.
+- **The eval measures citations and refusals, not truth.** Reading the answers found: Q015 says section 30 was deleted
+  (it is personal relief; the lookup also picked a schedule paragraph 30); Q022 gives the 2022 guide's PAYE bands;
+  Q038 misses the ten-to-five-year change.

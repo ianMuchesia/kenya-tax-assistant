@@ -7,3 +7,6 @@ wheels-*/
 pages.jsonl
 chunks_*.jsonl
 vectors_*.jsonl
+gemini_cache.jsonl
+answers_*.txt
+

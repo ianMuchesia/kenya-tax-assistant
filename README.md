@@ -47,6 +47,7 @@ system already handles). Mix on purpose:
 | 1 | Keyword search (BM25), top 5, strict scoring: overlap chunks **28/40 = 70%** (~1,050 words sent; 26/40 before fixing 2 wrong answer keys); fixed 20/40, heading 20/40. Contents pages: no effect. Weakest: exact_section 4/8, table 4/8. 11 questions missed by every method. |
 | 2 | Overlap chunks, top 5: keyword 28/40 = 70%; embeddings (nomic-embed-text) 27/40 = 68%; **hybrid (RRF) 31/40 = 78%**, ~930 words sent. Keyword and embeddings miss different questions, so merging them helps. |
 | 3 | Overlap chunks, top 5: section lookup + hybrid 33/40 = 82%; **section lookup + hybrid + multilingual reranker 35/40 = 88%**, ~1,070 words sent, about 7 seconds per question on CPU. Reranker alone: 31/40, no gain. Top-1 hits: hybrid 19, section 24, both 21. |
+| 4 (so far) | Gemini (`gemini-3.1-flash-lite`) answers all 50: right citation 27/40, right refusal 9/10, made-up citations 0, with or without the reranker. Reading the answers found wrong ones the score can't see (Q015 section 30, Q022 old PAYE bands). |
 
 ## Setup
 
@@ -70,7 +71,7 @@ system already handles). Mix on purpose:
 - [ ] Milestone 7: MCP server
 - [ ] Milestone 8: write-up
 
-**Next step:** Milestone 4: Gemini writes answers with citations and refuses when the documents don't answer (the 10
-unanswerable questions). Needs a Gemini API key in `.env`. Does the reranker stay? Decide here, by answer quality. Still
-missed: Q004 Q007 Q022 Q038 Q039. Each machine needs `python embed.py overlap` (~9 min, not in git), and the reranker
-needs torch, sentence-transformers and a 470 MB model, so run that at work, not at home.
+**Next step:** Milestone 4, continued: fix the wrong answers found by reading `answers_*.txt`: Q015 (section lookup
+picks up schedule paragraph 30), Q022 (old 2022 PAYE bands), Q038; check the citation keys that may be too strict
+(Q019, Q020); then decide whether the reranker stays (it added nothing to answers). Free tier: 500 requests a day,
+answers are cached in `gemini_cache.jsonl` (not in git), so reruns are free.
