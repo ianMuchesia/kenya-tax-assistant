@@ -20,6 +20,11 @@ OVERLAP = 50   # words repeated between two pieces of the same long section (met
 ACT_HEADING = re.compile(r"^\s*(\d+[A-Z]*)\.(\s+\S|\s*$)")  # "6A. Imposition..." or "6A." alone on its line
 TOC_LINE = re.compile(r"\.{5,}")                             # "6A. Imposition ......."  (contents pages)
 
+
+SCHEDULE_HEADING = re.compile(r"^\s*([A-Z]+) SCHEDULE\b")    # "FIRST SCHEDULE [ss. 13 and 14]" (capitals only)
+
+
+
 def load_documents()->dict[str, list[dict]]:
     docs = defaultdict(list)
     
@@ -114,12 +119,25 @@ def is_heading(line: str, is_act: bool) -> str | None:
 
 
 def sections(doc: str, pages: list[dict]) -> list[tuple[str, list[tuple[str, int]]]]:
-    """Walk the document line by line; start a new section at every heading."""
+    """Walk the document line by line; start a new section at every heading.
+    After a schedule heading, numbered paragraphs are labelled 'First Schedule para 30', not '30'."""
     is_act = "act" in doc
-    found, name, words = [], "(start)", []
+    found = []
+    name = "(start)"
+    words = []
+    schedule = None                             # NEW: None = still in the main sections of the Act
     for p in pages:
         for line in p["text"].splitlines():
+            # NEW: a real schedule heading (not a contents-page line) means we've reached the schedules
+            schedule_match = SCHEDULE_HEADING.match(line)
+            if is_act and schedule_match and not TOC_LINE.search(line):
+                schedule = schedule_match.group(1).title() + " Schedule"     # "FIRST" -> "First Schedule"
+
             heading = is_heading(line, is_act)
+            # NEW: inside a schedule, "30" becomes "First Schedule para 30"
+            if heading and schedule is not None:
+                heading = schedule + " para " + heading
+
             if heading and words:
                 found.append((name, words))
                 words = []
@@ -131,6 +149,7 @@ def sections(doc: str, pages: list[dict]) -> list[tuple[str, list[tuple[str, int
     if words:
         found.append((name, words))
     return found
+
 
 
 

@@ -40,7 +40,7 @@ def build_prompt(question: str, results: list[tuple[float, dict]]) -> str:
     prompt = ""
     number = 1
     for score, chunk in results:
-        prompt = prompt + f"Source [{number}] ({chunk['document']}, year {chunk['year']}, pages {chunk['pages']}):\n"
+        prompt = prompt + f"Source [{number}] ({chunk['document']}, year {chunk['year']}, section {chunk['section']}, pages {chunk['pages']}):\n"
         prompt = prompt + chunk["text"] + "\n\n"
         number = number + 1
     prompt = prompt + "Question: " + question

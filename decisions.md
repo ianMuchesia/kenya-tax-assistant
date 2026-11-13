@@ -97,3 +97,11 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
 - **The eval measures citations and refusals, not truth.** Reading the answers found: Q015 says section 30 was deleted
   (it is personal relief; the lookup also picked a schedule paragraph 30); Q022 gives the 2022 guide's PAYE bands;
   Q038 misses the ten-to-five-year change.
+- **Q015 root cause was in `chunk.py`:** after page 96 the Income Tax Act has schedules whose paragraphs are numbered
+  1, 2, 3... too, and every "30." was labelled section 30. So "section 30" also pulled in "First Schedule para 30.
+  Deleted by Act No. 2 of 2020", and Gemini said section 30 was deleted. Fix: after a real schedule heading (not a
+  contents-page line), label paragraphs "First Schedule para 30". 216 labels changed, chunk text unchanged, so the
+  vectors stayed valid. The label is now in each source header, so Gemini can tell a section from a schedule paragraph.
+  A workaround in `section_lookup.py` also worked, but it would have left wrong labels in the data.
+- **After the fix:** right citation 27 -> 30/40 with and without the reranker; search score unchanged (33/40).
+  Gemini returned 503 three times; the retry handled it.
