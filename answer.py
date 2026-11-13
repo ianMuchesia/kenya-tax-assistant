@@ -15,9 +15,11 @@ from bm25 import BM25, load_chunks
 from gemini import Gemini
 from hybrid import HybridSearch
 from mask import mask
-from rerank import RerankSearch
+# from rerank import RerankSearch
 from section_lookup import SectionSearch
 from vector_search import VectorSearch, load_vectors
+from rewrite import RewriteSearch
+
 
 CITATION = re.compile(r"\[([\d,\s]+)\]")     # "[2]" or "[1, 3, 4]"
 
@@ -96,7 +98,10 @@ class TaxAssistant:
 def build_assistant() -> TaxAssistant:
     chunks = load_chunks("overlap")
     hybrid = HybridSearch(BM25(chunks), VectorSearch(chunks, load_vectors("overlap")))
-    search_engine = SectionSearch(RerankSearch(hybrid), chunks)
+    gemini = Gemini()
+    # search_engine = SectionSearch(RewriteSearch(hybrid,gemini), chunks)
+    search_engine = SectionSearch(hybrid, chunks)
+
     return TaxAssistant(search_engine, Gemini())
 
 

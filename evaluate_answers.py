@@ -9,13 +9,14 @@ What this does NOT measure: whether the words of the answer are true. For that, 
 
 import csv
 from pathlib import Path
+from rewrite import RewriteSearch
 
 from answer import TaxAssistant
 from bm25 import BM25, load_chunks
 from evaluate import answer_locations, is_hit
 from gemini import Gemini
 from hybrid import HybridSearch
-from rerank import RerankSearch
+# from rerank import RerankSearch
 from section_lookup import SectionSearch
 from vector_search import VectorSearch, load_vectors
 
@@ -95,8 +96,10 @@ if __name__ == "__main__":
     gemini = Gemini()
 
     assistants = {
-        "with_reranker": TaxAssistant(SectionSearch(RerankSearch(hybrid), chunks), gemini),
+        # "with_reranker": TaxAssistant(SectionSearch(RerankSearch(hybrid), chunks), gemini),
         "no_reranker": TaxAssistant(SectionSearch(hybrid, chunks), gemini),
+        "no_rewrite": TaxAssistant(SectionSearch(hybrid, chunks), gemini),
+        "rewrite": TaxAssistant(SectionSearch(RewriteSearch(hybrid, gemini), chunks), gemini),
     }
 
     for name in assistants:

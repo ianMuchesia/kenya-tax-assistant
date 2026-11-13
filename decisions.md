@@ -105,3 +105,13 @@ One line (or a few) each time we choose something, and why. This becomes the Mil
   A workaround in `section_lookup.py` also worked, but it would have left wrong labels in the data.
 - **After the fix:** right citation 27 -> 30/40 with and without the reranker; search score unchanged (33/40).
   Gemini returned 503 three times; the retry handled it.
+- **Reranker dropped** from the assistant: answers 30/40 with and without it, and it costs ~7 s per question, PyTorch
+  and a 470 MB model. `rerank.py` stays as the record; `evaluate.py` still measures it.
+- **Query rewriting tried and dropped** (`rewrite.py` kept as the record). Gemini rewrites the masked question in the
+  law's words and both versions are searched and merged by rank. The first prompt added facts the user never said
+  ("Section 31", "Finance Act 2023"); a stricter prompt stopped that. Search: 33 -> 35/40. Answers: 30/40 both ways,
+  refusals 9/10 -> 8/10 (Q042 "2027 bands" got the 2026 rates as if they answered it), and twice the requests.
+  The rewrite also adds "employment income" to most questions, copied from the prompt's own example.
+- **Known limit, Q022:** the Act never says "PAYE bands", so search finds only the 2022 guide's old 3 bands. With the
+  rewrite the right chunk is rank 4 alone, but rank 8 after merging: the old guide is in both lists and outvotes it.
+  Stopped tuning here: three prompt/merge versions on the same 40 questions starts fitting the test.
